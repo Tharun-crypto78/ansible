@@ -1,0 +1,20 @@
+- name: play level variables
+  hosts: local
+  connection: local
+  vars:
+  # Do-able access
+    COURSE: DevOps with AWS 
+    DURATION: 10HR
+    TRAINER: SivaKumar
+  tasks:
+  # local access
+  - name: print course information
+    vars:
+      COURSE: Ansible
+    ansible.builtin.debug:
+      msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
+      # VARS reference should be in double quotes, then only ansible understands it as a varibale.
+
+  - name: print course information
+    ansible.builtin.debug:
+      msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
