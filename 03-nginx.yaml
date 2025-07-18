@@ -1,5 +1,6 @@
 - name: nginx install and run
   hosts: frontend
+  become: yes # it means sudo access
   tasks:
   - name: install nginx server # we don't know what module to install --> search 'ansible install package
     ansible.builtin.package: 
