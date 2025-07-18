@@ -10,3 +10,7 @@
     ansible.builtin.debug:
       msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
       # VARS reference SHOULD BE IN DOUBLE QUOTES, THEN ONLY ANSIBLE UNDERSTANDS IT AS A VARIABLE.
+  
+  - name: print course information again
+    ansible.builtin.debug:
+      msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
