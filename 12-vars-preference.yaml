@@ -16,9 +16,11 @@
     ansible.builtin.debug:
       msg: "{{ GREETING }}"
 
-# command line outputs order series:    after getting particular output comment out those script lines above 
+# command line variables output Preference order series:    After getting particular output comment out those script lines above 
 # 1. command line or args
 # 2. Task
 # 3. File
 # 4. Prompt
 # 5. Play
+# 6. Inventory
+# [ No need to remember the order of preference ]
