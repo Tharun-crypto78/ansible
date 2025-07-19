@@ -9,7 +9,7 @@
     - Linux
     - shell
     - Ansible
-    CONCEPTS: # this is called map or dictionary or object. Object usually referred by braces
+    CONCEPTS: # this is called map or dictionary or object. Object usually referred by { } braces and are in Key-Pairs.
       CI: Jenkins
       SCRIPTING: "Shell, Ansible, Terraform, Python"
   tasks:
