@@ -11,3 +11,13 @@
   - name: print names
     ansible.builtin.debug:
       msg: "Hello {{ persons | split(',') }}" # if we want to convert the string of variables into list, we use the delimitor 'split()' here.
+
+# we can also make the map into list and vice-versa
+  - name: convert map into list
+    vars: 
+      course: 
+        name: ansible
+        duration: 10HR
+        trainer: SivaKumar
+    ansible.builtin.debug:
+      msg: "Course Information: {{ course | dict2items }}"
