@@ -13,7 +13,7 @@
       msg: "Hello {{ persons | split(',') }}" # if we want to convert the string of variables into list, we use the delimitor 'split()' here.
 
 # we can also make the map into list and vice-versa
-  - name: convert map into list
+  - name: convert list into map
     vars: 
       course: 
         name: ansible
@@ -21,3 +21,4 @@
         trainer: SivaKumar
     ansible.builtin.debug:
       msg: "Course Information: {{ course | dict2items }}"
+  
