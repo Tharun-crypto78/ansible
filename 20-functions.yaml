@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    persons: "Ramesh, Suresh, Tharun, Reddy"
+    persons: "Ramesh, Suresh, Tharun, Reddy" # string of variables
   tasks:
   - name: check undefined variable
     ansible.builtin.debug:
@@ -10,4 +10,4 @@
 
   - name: print names
     ansible.builtin.debug:
-      msg: "Hello {{ persons }}"
+      msg: "Hello {{ persons | split(',') }}" # if we want to convert the string of variables into list, we use the delimitor 'split()' here.
