@@ -36,9 +36,9 @@
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
 
-# to check whether the given IP address is valid or not. (max IP: 255.255.255.255)
+# to check whether the given IP address is valid or not.max IP: 255.255.255.255
   - name: check IP address is valid or not
     vars:
-      ip: "300.567.980.789"
+      ip: "255.255.255.255"
       ansible.builtin.debug:
         msg: "{{ ip | ansible.utils.ipaddr }}"
