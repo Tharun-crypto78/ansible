@@ -25,14 +25,14 @@
 # Whenever we require upper case and lower case, we can create some functions
   - name: convert to uppercase
     vars:
-      name: " Tharun Reddy D"
+      name: "Tharun Reddy D"
     ansible.builtin.debug:
       msg: "Hello {{ name | upper }}"
 
 # converting into lower case
   - name: convert to lowercase
     vars:
-      name: " Tharun Reddy D"
+      name: "Tharun Reddy D"
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
 
