@@ -1,0 +1,7 @@
+- name: functions
+  hosts: local
+  connection: local
+  tasks:
+  - name: check undefined variable
+    ansible.buitin.debug:
+      msg: "Hello, {{ person | default('Tharun') }}" # if we haven't defined a variable then we can give '| default (name)'
