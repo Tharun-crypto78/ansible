@@ -22,3 +22,9 @@
     ansible.builtin.debug:
       msg: "Course Information: {{ course | items2dict }}"
   
+# Whenever we require upper case and lower case, we can create some functions
+  - name: conver to uppercase
+    vars:
+      name: " Tharun Reddy D"
+    ansible.builtin.debug:
+      msg: "Hello {{ name | upper }}"
