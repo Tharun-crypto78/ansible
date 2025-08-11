@@ -7,6 +7,10 @@ filters:
 hostname:
   # you can also specify a list in order of precedence for hostname variable.
   - private-ip-address
+keyed_groups:
+- key: tags.Name
+  prefix: ""
+  seperator: ""
 compose:
   # This sets the 'ansible_host' variable to connect with the private IP adress without changing the host
   ansible_host: private_ip_address
