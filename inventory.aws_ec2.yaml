@@ -3,10 +3,10 @@ regions:
 - us-east-1
 filters:
   tag:Name: frontend
-  instance-state-name: running
+  instance-state-name : running
 hostname:
   # you can also specify a list in order of precedence for hostname variable.
-  - ip-address
+  - private-ip-address
 compose:
   # This sets the 'ansible_host' variable to connect with the private IP adress without changing the host
   ansible_host: private_ip_address
