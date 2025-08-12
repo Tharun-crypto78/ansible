@@ -1,6 +1,7 @@
 - name: install nginx
   hosts: dynamic_frontend
   become: yes
+  serial: 5 # if we give serial as 5, then playbook keeps executing after every 5 servers
   tasks:
   - name: install nginx
     ansible.builtin.dnf:
