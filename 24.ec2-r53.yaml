@@ -15,7 +15,7 @@
       vpc_subnet_id: "{{ subnet_id }}" 
       instance_type: t3.micro
       security_group: "{{ sg_id }}"
-      ami_id: ami-09c813fb71547fc4f # aws instance --> details
+      image_id: ami-09c813fb71547fc4f # aws instance --> details
       tags:
         Name: "{{ item }}"
     loop: "{{ instances }}"
